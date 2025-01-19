@@ -30,7 +30,7 @@ class Mylexer:
     t_NEWLINE = r'\n+'
     t_SEMICOLON = r';'
 
-    # semantic Action
+   
     @staticmethod
     def t_LET(token):
         r'let'
