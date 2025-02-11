@@ -105,9 +105,11 @@ class Mylexer:
     def t_newline(token):
         r'\n+'
         token.lexer.lineno += len(token.value)
-
+    #Build the lexer
+    
     def build(self, **kwargs):
         self.lexer = lex.lex(module=self, **kwargs)
+    # To test the lexer
 
     def test(self, data):
         self.lexer.input(data)
@@ -122,7 +124,7 @@ class Mylexer:
 if __name__ == '__main__':
     data = '''
     let x = 5 + 3.14; # variable
-    if (x < 10) {
+    if (x < 10) {   
         return x;
     } else {
         return 0;
